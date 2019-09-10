@@ -9,6 +9,11 @@ type Node struct {
 	Key  interface{}
 }
 
+func LinkedList(key interface{}) *Node {
+	node := Node{nil, key}
+	return &node
+}
+
 func (node *Node) Insert(key interface{}) {
 	pointer := node
 	for pointer.Next != nil {
@@ -28,6 +33,6 @@ func (node *Node) Print() {
 		return
 	}
 
-	fmt.Printf("%v ->", node.Key)
+	fmt.Printf("%v -> ", node.Key)
 	node.Next.Print()
 }
