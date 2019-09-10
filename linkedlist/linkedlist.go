@@ -23,6 +23,15 @@ func (node *Node) Insert(key interface{}) {
 	pointer.Next = &Node{nil, key}
 }
 
+func (node *Node) InsertNode(newNode *Node) {
+	pointer := node
+	for pointer.Next != nil {
+		pointer = pointer.Next
+	}
+
+	pointer.Next = newNode
+}
+
 func (node *Node) Print() {
 	if node == nil {
 		return
