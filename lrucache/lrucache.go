@@ -3,7 +3,7 @@ package lrucache
 import (
 	"errors"
 	"fmt"
-	"github.com/ramsgoli/datastructures/linkedlist"
+	"github.com/ramsgoli/datastructures/v2/linkedlist"
 )
 
 type LRUCache struct {
