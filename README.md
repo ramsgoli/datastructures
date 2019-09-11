@@ -4,3 +4,5 @@
 
 The list includes:
 * Linked List
+* Max Stack
+* LRU Cache
