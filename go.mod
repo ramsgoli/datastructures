@@ -1,3 +1,3 @@
-module github.com/ramsgoli/datastructures
+module github.com/ramsgoli/datastructures/v2
 
 go 1.13
