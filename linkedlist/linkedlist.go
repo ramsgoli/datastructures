@@ -32,6 +32,28 @@ func (node *Node) InsertNode(newNode *Node) {
 	pointer.Next = newNode
 }
 
+// Remove removes a node with the specified value from the linked list
+func (node *Node) Remove(key interface{}) {
+	// case 1. The head node is the node to remove
+	if node.Key == key {
+		node = node.Next
+		return
+	}
+	// case 2.
+	prev := node
+	curr := node.Next
+
+	// iterate through list until we find key we want to remove
+	for curr != nil && curr.Key != key {
+		prev = curr
+		curr = curr.Next
+	}
+
+	if curr != nil {
+		prev.Next = curr.Next
+	}
+}
+
 func (node *Node) Print() {
 	if node == nil {
 		return
